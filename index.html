@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="images/library1.jpeg">
+        <h1>Library management</h1>
+        <button id="btn">sign in</button>
+    </div>
+    <hr>
+    <div class="overlay"></div>
+    <div class="popup hidden">
+        <h3>Username :</h3>
+        <input type="text">
+        <h3>Password :</h3>
+        <input type="text">
+        <button class="close">Sign In</button>
+    </div>
+    <div class="Member">
+    <h1>Member Details</h1>
+</div>
+ <div class="mem">
+        <h2><a href="memberlist.html">Members list</a></h2>
+        <h2><a href="addmember.html">Add member</a></h2>
+        <h2><a href="removemember.html">Remove member</a></h2>
+        <h2><a href="editmember.html">Edit member</a></h2>
+        
+</div>
+<div class="Book">
+    <h1>Book management</h1>
+</div>
+<div class="book1">
+    <h4><a href="listbooks.html">List All Books</a></h4>
+    <h4><a href="addbooks.html">Add new book</a></h4>
+    <h4><a href="removebook.html">Delete book</a></h4>
+    <h4><a href="editbook.html">Edit book details</a></h4>
+
+
+
+</div>
+<div class="bookissuing">
+    <h1>Book Issuing Details</h1>
+    </div>
+    <div class="Issue"><a href="issuebook.html"><h3>Issue a Book</h3></a></div>
+    <div class="Return"><a href="returnbook.html"><h3>Return an Issued Book</h3></a></div>
+
+
+<script>
+    var popup= document.querySelector(".popup")
+    var btn=document.getElementById("btn")
+    var close=document.querySelector(".close")
+    var overlay=document.querySelector(".overlay")
+
+    btn.addEventListener("click",function(){
+        popup.classList.remove("hidden")
+        overlay.style.display="block"
+    })
+    close.addEventListener("click",function(){
+        popup.classList.add("hidden")
+        overlay.style.display="none"
+    })
+    </script>
+
+    
+</body>
+</html>

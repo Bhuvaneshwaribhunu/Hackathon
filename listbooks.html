@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member list</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav class="navbar">
+    <img src="Images/logo.jpg">
+    <h1>Library Management System</h1>
+    <button><a href="index.html">Back</a></button>
+</nav>
+
+<table border="1" id="myTable">
+  
+  <thead class>
+    <tr class="row">
+      <th>Book No</th>
+      <th>Book Name</th>
+      <th>Author name</th>
+      <th>Member Details</th>
+      <th>Issue Date</th>
+      <th>Received Date</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+    
+  </tbody>
+</table>
+</body>
+</html>
+
+<style>
+    #myTable{
+        text-align: center;
+        height:600px;
+        width:1200px;
+        background-color: rgb(219, 232, 238);
+        border-radius: 5px;
+        color: blueviolet;
+        margin-top: 50px;
+        margin-left: 100px;
+        padding:20px;
+      border-collapse: separate;
+      border-spacing: 5px; 
+    }
+    #myTable th,td{
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    .row{
+        margin-bottom: 15px;
+    }
+    .row th{
+        font-size: 26px;
+        border:1px solid #000000;
+        border-radius: 10px;
+        padding:10px;
+        color: navy;
+        margin-bottom: 10px;
+    }
+    #tableBody{
+        font-size: 21px;
+        color: blueviolet;
+        border:1px solid grey;
+        border-radius: 10px;
+    }
+    
+</style>
+
+<script>
+var data = [
+  ["12345","Positive Thoughts", "Sudha Murthy", "11111","01.01.2024","15.01.2024"],
+  ["22343", "Harry potter", "J.K.Rowling", "11112","05.01.2024","21.01.2024"],
+  ["32354", "A monk who sold his ferrari","Robin Sharma", "11113","04.01.2024","19.01.2024"],
+  ["42345", "Happy family","Adrin", "11114", "01.01.2024","15.01.2024"],
+  ["24556","Arabian Nights", "P.Narayanan", "11115","01.01.2024","15.01.2024"],
+  ["68942","Moral stories", "Leonel", "11116", "03.01.2024","18.01.2024"],
+  ["12569","How to be a Millionaire", "Charles", "11117","06.01.2024","21.01.2024"],
+  ["98628", "Software solutions","Bakshi", "11118", "07.01.2024","12.01.2024"],
+  ["34567","Microbiology", "Gopal", "11119","09.01.2024","23.01.2024"],
+  ["10576", "Embedded systems","Rajkumar", "11120", "11.01.2024","26.01.2024"],
+  // Add more rows as needed
+];
+
+var tableBody = document.getElementById('tableBody');
+
+for (var i = 0; i < data.length; i++) {
+  var row = tableBody.insertRow(i);
+for (var j = 0; j < data[i].length; j++) {
+    var cell = row.insertCell(j);
+    cell.innerHTML = data[i][j];
+  }
+}
+</script>
